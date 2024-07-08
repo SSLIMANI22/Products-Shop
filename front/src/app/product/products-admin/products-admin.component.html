@@ -1,0 +1,18 @@
+
+  <app-table [data]= "filteredItems" [config]="config"
+  [editableRows]="true"
+  [deletableRows]="true"
+  [selectable]="true"
+  [allowAdd]="true"
+  [allowDelete]="true"
+  [allowEdit]="true"
+  [entity]="entity"
+  [lazy]="true"
+  [totalRecords]="totalRecords"
+  [multiSelect]="true"
+  (saved)="onSaved($event)"
+  (deleted)="onDeleted($event)"
+  (lazyLoaded)="onLazyLoaded($event)"
+   >
+
+  </app-table>

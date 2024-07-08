@@ -1,0 +1,24 @@
+
+.grid-item {
+  margin: 0.5em;
+  height: 200px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--secondary-bg-color);
+
+  &:hover {
+    background-color: var(--tertiary-bg-color);
+  };
+}
+::ng-deep .product{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.list-item{
+    padding: 10px;
+}

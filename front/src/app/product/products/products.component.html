@@ -1,0 +1,28 @@
+<div class="product">
+  <app-list [items]="items" [pagination]="true" [totalRecords]="items.length" [sortOptions]="sortOptions"
+    [layout]="'grid'" [enableAdd]="false" [gridItemTemplate]="gridItemTemplate" [listItemTemplate]="listItemTemplate"
+    [enableDateRange]="false" [listKey]="'myList'" [sortKey]="'name'" [dateRangeKey]="'creationTime'"
+    [selectable]="false" [backEndSearch]="false" (pageChanged)="onPageChanged($event)" (filtered)="onFiltered($event)"
+    (addClicked)="onAddClicked()" (deleteClicked)="onDeleteClicked($event)">
+
+  </app-list>
+  <ng-template #gridItemTemplate let-item let-index="index">
+    <div class="grid-item">
+      <p>{{ item.category }}</p>
+      <p>{{item.inventoryStatus}}</p>
+      <h4>{{ item.name }}</h4>
+      <p>{{ item.description }}</p>
+      <button pButton icon="pi pi-shopping-cart"></button><span>{{ item.price }} $</span>
+    </div>
+  </ng-template>
+  <ng-template #listItemTemplate let-item let-index="index">
+    <div class="list-item">
+      <h4>{{ item.name }}</h4>
+      <p>{{ item.description }}</p>
+      <button pButton icon="pi pi-shopping-cart"></button><span>{{ item.price }} $</span>
+
+
+    </div>
+  </ng-template>
+
+</div>
